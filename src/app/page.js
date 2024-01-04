@@ -4,6 +4,7 @@ import Header from './components/Header'
 import TodoProvider from './Context/TodoContext'
 import TodoList from './components/Todolist'
 import Todo from './components/Todo'
+import Footer from './components/Footer'
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
         <Header/>
         <Todo/>
         <TodoList/>
+        <Footer/>
         </TodoProvider>
         
     </main>

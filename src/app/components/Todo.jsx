@@ -1,9 +1,6 @@
-'use client'
 import { useContext } from "react";
-import cancelImage from "../../../public/assets/images/cancel.png";
+import { FaRegTrashCan } from "react-icons/fa6";
 import { TodoContext } from "../Context/TodoContext";
-import Image from "next/image";
-
 
 export default function Todo({ task }) {
   const { tasks, setTasks } = useContext(TodoContext);
@@ -19,7 +16,7 @@ export default function Todo({ task }) {
   };
 
   const handleDelete = (id) => {
-    const updatedTasks = tasks.filter((tasks) => tasks.id !== id);
+    const updatedTasks = tasks.filter((task) => task.id !== id);
     setTasks(updatedTasks);
   };
   return (
@@ -50,16 +47,12 @@ export default function Todo({ task }) {
           tasks.completed && "line-through"
         }`}
       >
-        {tasks?.name}
+        {task?.name}
       </div>
 
-      <Image
-        title="remove this todo"
-        onClick={() => handleDelete(task.id)}
-        src={cancelImage}
-        className="flex-shrink-0 w-6 h-6 ml-2 cursor-pointer delete-image"
-        alt="Cancel"
-      />
+      <FaRegTrashCan title="remove this todo"
+        onClick={() => handleDelete(task.id)} 
+        className="text-3xl" />
     </div>
   );
 }

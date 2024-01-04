@@ -7,7 +7,7 @@ import { TodoContext } from "../Context/TodoContext";
 import Image from "next/image";
 export default function Header() {
   const [input, setInput] = useState("");
-  const { tasks, setTasks } = useContext(TodoContext); 
+  const { tasks, setTasks } = useContext(TodoContext);
 
 
   const handleSubmit = (e) => {
@@ -50,8 +50,13 @@ export default function Header() {
           placeholder="Type your todo"
           className="w-full text-lg px-4 py-1 border-none outline-none bg-transparent text-gray-200"
         />
-       
-      
+
+        <button
+          type="submit"
+            className="w-btn w-btn-primary"
+        ></button>
+
+
       </form>
 
       <ul className="flex justify-between my-4 text-xs text-gray-300">

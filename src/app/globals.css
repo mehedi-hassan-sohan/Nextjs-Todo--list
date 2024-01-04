@@ -2,3 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed&family=Unbounded&display=swap");
+
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+}
+
+body {
+  background-color: rgb(11, 2, 22) !important;
+  color: white !important;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif !important;
+}
+.billheader-bg {
+  background-color: rgb(58, 34, 87) !important;
+}
+
+.todo-body {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(0.5px);
+  -webkit-backdrop-filter: blur(0.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.nav-bg {
+  background: rgba(117, 114, 114, 0.116);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(0.5px);
+  -webkit-backdrop-filter: blur(0.5px);
+  /* border-radius: 10px; */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.image-style {
+  filter: invert(80%);
+}
+
+.delete-image {
+  filter: invert(80%) sepia(9%) saturate(10000%) contrast(100%) hue-rotate(0deg)
+    brightness(100%);
+}
+
+.font-stylee {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+
+.blurdiv {
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  right: 50%;
+  transform: translate(-50%, 0%);
+  width: 800px;
+  height: 80px;
+  border-radius: 50% 22% 40% 80%;
+  filter: blur(100px);
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(76, 0, 255, 1),
+    rgba(76, 0, 255, 0)
+  );
+  opacity: 0.6;
+}
+.blurdiv2 {
+  z-index: 1;
+  position: fixed;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 800px;
+  height: 80px;
+  border-radius: 50% 22% 40% 80%;
+  filter: blur(100px);
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(76, 0, 255, 1),
+    rgba(76, 0, 255, 0)
+  );
+  opacity: 0.6;
+}

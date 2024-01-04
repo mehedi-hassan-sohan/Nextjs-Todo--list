@@ -29,10 +29,10 @@ export default function Todo({ task }) {
         <input
           type="checkbox"
           checked={tasks.completed}
-          onChange={() => handleCompleteTask(tasks.id)}
+          onChange={() => handleCompleteTask(task.id)}
           className="opacity-0  absolute rounded-full cursor-pointer"
         />
-        {tasks.completed && (
+        {task.completed && (
           <svg
             className=" fill-current w-3 h-3 text-green-500 pointer-events-none"
             viewBox="0 0 20 20"
@@ -50,9 +50,10 @@ export default function Todo({ task }) {
         {task?.name}
       </div>
 
-      <FaRegTrashCan title="remove this todo"
-        onClick={() => handleDelete(task.id)} 
-         className="text-3xl" />
+      <FaRegTrashCan title="remove this todo" 
+
+         onClick={() => handleDelete(task.id)} 
+         className="text-3xl text-white" />
     </div>
   );
 }

@@ -2,6 +2,7 @@
 import toast, { Toaster } from "react-hot-toast";
 import tickImage from "../../../public/assets/images/double-tick.png";
 import noteImage from "../../../public/assets/images/notes.png";
+import { FaCirclePlus } from "react-icons/fa6";
 import { useContext, useState } from "react";
 import { TodoContext } from "../Context/TodoContext";
 import Image from "next/image";
@@ -14,7 +15,8 @@ export default function Header() {
     e.preventDefault();
     if (input.trim() === "") {
       toast.error("Please enter a todo");
-    } else {
+    }
+     else {
       const newTask = { id: Date.now(), name: input, completed: false };
       setTasks([...tasks, newTask]);
       setInput("");
@@ -26,12 +28,11 @@ export default function Header() {
   const clearHandler = () => {
     const newTasks = tasks.filter((task) => !task.completed);
     setTasks(newTasks);
+    setInput(""); // Reset the input to an empty string
   };
-
+  
   const completeHandler = () => {
-    const newTasks = tasks.map((task) => {
-      return { ...task, completed: true };
-    });
+    const newTasks = tasks.map((task) => ({ ...task, completed: true }));
     setTasks(newTasks);
   };
 
@@ -54,7 +55,8 @@ export default function Header() {
         <button
           type="submit"
             className="w-btn w-btn-primary"
-        ></button>
+        ><FaCirclePlus className="text-2xl" />
+        </button>
 
 
       </form>

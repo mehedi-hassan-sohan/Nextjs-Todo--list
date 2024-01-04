@@ -52,7 +52,7 @@ export default function Todo({ task }) {
 
       <FaRegTrashCan title="remove this todo"
         onClick={() => handleDelete(task.id)} 
-        className="text-3xl" />
+         className="text-3xl" />
     </div>
   );
 }
